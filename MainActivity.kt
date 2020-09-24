@@ -8,9 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
-// after adding synthetic import , all the wedget in the layout can be accessed just like any property
-// the kotlin extention pugin creates properties corresponding to each of the view in the  layout
-// there's no need to write findViewByid
+
 import kotlinx.android.synthetic.main.activity_main.*
 
 private const val TAG = "MainActivity"
@@ -21,15 +19,7 @@ private const val STATE_OPERAND1_STORED = "Operand1_Stored"
 @Suppress("PLUGIN_WARNING")
 class MainActivity : AppCompatActivity() {
 
-//    private lateinit var result: EditText
-//    private lateinit var newNumber : EditText
 
-    //you're defining  a fun that'll be called to assign to the property
-    // called the fun the 1st time the property accessed then the value is cached
-    // the lazy fun is thready safe coz will be called once
-  //  private val displayOperation by lazy(LazyThreadSafetyMode.NONE){findViewById<TextView>(R.id.operation)}
-
-    // Variable to hold the operand and type of calculation
     private var operand1 : Double? = null
     private var pendingOperation = " = "
 
@@ -37,28 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        result = findViewById(R.id.result)
-//        newNumber = findViewById(R.id.newNumber)
 
-        //Data input button
-//        val button0 : Button = findViewById(R.id.button0)
-//        val button1 : Button = findViewById(R.id.button1)
-//        val button2 : Button = findViewById(R.id.button2)
-//        val button3 : Button = findViewById(R.id.button3)
-//        val button4 : Button = findViewById(R.id.button4)
-//        val button5 : Button = findViewById(R.id.button5)
-//        val button6 : Button = findViewById(R.id.button6)
-//        val button7 : Button = findViewById(R.id.button7)
-//        val button8 : Button = findViewById(R.id.button8)
-//        val button9 : Button = findViewById(R.id.button9)
-//        val buttonDot : Button = findViewById(R.id.buttonDot)
-
-        // Operation buttons
-//        val buttonEqual : Button = findViewById(R.id.buttonEqual)
-//        val buttonDivide: Button  = findViewById(R.id.buttonDivide)
-//        val buttonMultiply: Button  = findViewById(R.id.buttonMultiply)
-//        val buttonMinus : Button = findViewById(R.id.buttonMinus)
-//        val buttonPlus : Button = findViewById(R.id.buttonPlus)
 
         val listener = View.OnClickListener { v->
             val b = v as Button
