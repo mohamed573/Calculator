@@ -1,4 +1,4 @@
-package learnprogramming.academy
+package com.app.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
