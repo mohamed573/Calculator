@@ -16,6 +16,7 @@ private const val STATE_PENDING_OPERATION = "PendingOperation"
 private const val STATE_OPERAND1 = "Operand1"
 private const val STATE_OPERAND1_STORED = "Operand1_Stored"
 
+
 @Suppress("PLUGIN_WARNING")
 class MainActivity : AppCompatActivity() {
 
